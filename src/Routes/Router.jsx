@@ -13,6 +13,7 @@ import MyItems from '../Pages/Manage My items/MyItems';
 import AllRecoveredItems from '../Pages/AllRecoveredItems';
 import PrivateRoute from './PrivateRoute';
 import About from '../Pages/About';
+import Error from '../Pages/Error';
 
 
 
@@ -69,6 +70,10 @@ const Router = createBrowserRouter([
             }
         ],
     },
+    {
+        path:'*',
+        element:<Error></Error>
+    }
 ]);
 
 export default Router;
