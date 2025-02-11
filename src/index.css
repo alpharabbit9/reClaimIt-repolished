@@ -2,7 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: 'Poppins', sans-serif;
+}
 
-li .active{
-    background-color: aquamarine;
+li .active {
+  background-color: aquamarine;
 }

@@ -26,17 +26,17 @@ const Categories = () => {
     ];
 
     return (
-        <div className="bg-gray-900 text-white py-12 px-6">
+        <div className="bg-orange-50 text-gray-700 py-12 px-6">
             <div className="max-w-6xl mx-auto">
                 <h2 className="text-3xl font-bold text-center mb-6">Categories</h2>
-                <p className="text-center mb-10 text-gray-400">
+                <p className="text-center mb-10 ">
                     Explore categories of items commonly lost to find or report your belongings.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     {categories.map((category, index) => (
                         <div
                             key={index}
-                            className="flex flex-col items-center justify-center bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
+                            className="flex flex-col items-center justify-center bg-orange-100 rounded-lg p-6 shadow-md  transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
                         >
                             <div onClick={'/recoveredItems'} className="mb-4">{category.icon}</div>
                             <h3 className="text-xl font-semibold">{category.name}</h3>

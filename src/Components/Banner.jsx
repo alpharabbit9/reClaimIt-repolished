@@ -34,7 +34,7 @@ const Banner = () => {
                 </div>
             </div>
 
-            <div className="flex w-full justify-center gap-2 py-2 bg-gray-900">
+            <div className="flex w-full justify-center gap-2 py-2 bg-orange-50">
                 <a href="#item1" className="btn btn-xs">1</a>
                 <a href="#item2" className="btn btn-xs">2</a>
                 <a href="#item3" className="btn btn-xs">3</a>

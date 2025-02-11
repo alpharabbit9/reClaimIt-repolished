@@ -5,20 +5,34 @@ import { useContext } from 'react';
 import AuthContext from '../Provider/AuthContext';
 
 const Navbar = () => {
-  const { user , userLogOut } = useContext(AuthContext)
+  const { user, userLogOut } = useContext(AuthContext)
   const navigate = useNavigate();
 
-  const links = <>
-    <li className='mr-3'><NavLink to={'/'}>Home</NavLink></li>
-    <li className='mr-3'><NavLink to={'/addItems'}>Add Lost & Found Item</NavLink></li>
-    <li className='mr-3'><NavLink to={'/lostFoundItems'}>Lost and Found Items</NavLink></li>
-    <li className='mr-3'><NavLink to={'/recoveredItems'}>Recovered Items</NavLink></li>
-    <li className='mr-3'><NavLink to={'/myItems'}>My Items</NavLink></li>
-    
-    
+  const links = (
+    <>
+      <li className="mr-3">
+        <NavLink to={"/"}>Home</NavLink>
+      </li>
+      <li className="mr-3">
+        <NavLink to={"/lostFoundItems"}>Lost and Found Items</NavLink>
+      </li>
 
-
-  </>
+      {/* Show these links only if the user is logged in */}
+      {user && (
+        <>
+          <li className="mr-3">
+            <NavLink to={"/addItems"}>Add Lost & Found Item</NavLink>
+          </li>
+          <li className="mr-3">
+            <NavLink to={"/recoveredItems"}>Recovered Items</NavLink>
+          </li>
+          <li className="mr-3">
+            <NavLink to={"/myItems"}>My Items</NavLink>
+          </li>
+        </>
+      )}
+    </>
+  )
   return (
     <div className="navbar text-white fixed z-10 bg-opacity-35 bg-black">
       <div className="navbar-start">
@@ -53,15 +67,15 @@ const Navbar = () => {
       <div className="navbar-end">
         {
           user && user?.email ?
-          <>
-          <img  className='w-11 rounded-full mr-3' src={user.photoURL} alt="" />
-          <button onClick={() =>{
-            userLogOut();
-            navigate('/')
-          }} className='btn'>Logout</button>
-          </>
-          :
-          <Link to={'/login'} className="btn">Login</Link>
+            <>
+              <img className='w-11 rounded-full mr-3' src={user.photoURL} alt="" />
+              <button onClick={() => {
+                userLogOut();
+                navigate('/')
+              }} className='btn'>Logout</button>
+            </>
+            :
+            <Link to={'/login'} className="btn">Login</Link>
         }
       </div>
     </div>

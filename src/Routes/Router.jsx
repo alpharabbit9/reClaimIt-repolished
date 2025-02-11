@@ -34,7 +34,9 @@ const Router = createBrowserRouter([
             },
             {
                 path: 'addItems',
-                element: <AddLostFound></AddLostFound>
+                element: <PrivateRoute>
+                    <AddLostFound></AddLostFound>
+                </PrivateRoute>
             },
             {
                 path: 'lostFoundItems',
