@@ -73,8 +73,8 @@ const ItemDetails = () => {
     }
 
     return (
-        <div className="bg-black min-h-screen py-20 text-white">
-            <div className="max-w-4xl mx-auto bg-gray-800 p-8 rounded-lg shadow-xl">
+        <div className="bg-orange-50 min-h-screen py-20 text-gray-700">
+            <div className="max-w-4xl mx-auto bg-orange-100  p-8 rounded-3xl shadow-xl">
                 <h2 className="text-3xl font-bold mb-6">{item.title}</h2>
                 <figure>
                     <img

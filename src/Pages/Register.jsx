@@ -112,39 +112,39 @@ const Register = () => {
             });
     };
     return (
-        <div className="hero bg-[#8770FF] min-h-screen p-5">
+        <div className="hero bg-orange-100 min-h-screen p-12">
             <div className="hero-content p-5 gap-16 flex justify-between  lg:flex-row-reverse">
                 <div className="text-center lg:text-center w-full flex-1">
-                    <h1 className="text-5xl font-bold text-white">Create Account</h1>
-                    <Lottie animationData={LoginAnimation}></Lottie>
+                    <h1 className="text-5xl font-bold text-gray-700">Create Account</h1>
+                    <Lottie classID='w-full' animationData={LoginAnimation}></Lottie>
                 </div>
                 <div className="card  w-full max-w-screen-lg shadow-2xl flex-1">
                     <form onSubmit={HandleRegister} className="card-body">
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text text-white">Name</span>
+                                <span className="label-text text-gray-700">Name</span>
                             </label>
                             <input name='name' type="text" placeholder="name" className="input input-bordered text-black" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text text-white">Photo URL</span>
+                                <span className="label-text text-gray-700">Photo URL</span>
                             </label>
                             <input name='photo' type="text" placeholder="photo URL" className="input input-bordered text-black" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text text-white">Email</span>
+                                <span className="label-text text-gray-700">Email</span>
                             </label>
                             <input name='email' type="email" placeholder="email" className="input input-bordered text-black" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text text-white">Password</span>
+                                <span className="label-text text-gray-700">Password</span>
                             </label>
                             <input name='password' type="password" placeholder="password" className="input input-bordered text-black" required />
 
-                            <p className='text-white mt-2'>New here ? <Link to={'/login'}>Already have an Account</Link></p>
+                            <p className='text-gray-700 mt-2'>New here ? <Link to={'/login'}>Already have an Account</Link></p>
                         </div>
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Register</button>
@@ -153,7 +153,7 @@ const Register = () => {
                             <button
                                 type="button"
                                 onClick={handleGoogle}
-                                className="btn bg-white text-black flex items-center justify-center gap-2 w-full"
+                                className="btn bg-gratext-gray-700 text-black flex items-center justify-center gap-2 w-full"
                             >
                                 <FcGoogle /> Signup with with Google
                             </button>

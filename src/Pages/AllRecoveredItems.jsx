@@ -36,8 +36,8 @@ const AllRecoveredItems = () => {
     }
 
     return (
-        <div className="bg-black min-h-screen py-32 text-white">
-            <div className="max-w-6xl mx-auto p-6 bg-gray-800 rounded-lg shadow-lg">
+        <div className="bg-orange-50 min-h-screen py-32 text-white">
+            <div className="max-w-6xl mx-auto p-6 bg-orange-100 text-gray-700 rounded-lg shadow-lg">
                 <h2 className="text-3xl font-bold mb-6">All Recovered Items</h2>
 
                 {recoveredItems.length === 0 ? (
@@ -45,9 +45,9 @@ const AllRecoveredItems = () => {
                         No recovered items found.
                     </p>
                 ) : (
-                    <table className="w-full border-collapse bg-gray-900 rounded-lg">
+                    <table className="w-full border-collapse bg-white rounded-lg">
                         <thead>
-                            <tr className="bg-gray-700">
+                            <tr className="bg-white">
                                 <th className="text-left p-4">Item Name</th>
                                 <th className="text-left p-4">Recovered Location</th>
                                 <th className="text-left p-4">Recovered Date</th>
@@ -58,7 +58,7 @@ const AllRecoveredItems = () => {
                             {recoveredItems.map((item) => (
                                 <tr
                                     key={item._id}
-                                    className="border-b border-gray-700 hover:bg-gray-800"
+                                    className="border-b border-gray-700 hover:bg-gray-100"
                                 >
                                     <td className="p-4">{item.itemName || "N/A"}</td>
                                     <td className="p-4">{item.recoveredLocation}</td>

@@ -1,4 +1,7 @@
+
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+
 
 const RecentlyLostItems = () => {
     const [items, setItems] = useState([]);
@@ -21,8 +24,9 @@ const RecentlyLostItems = () => {
                 {items.map((item, index) => (
                     <div
                         key={index}
-                        className="p-4 bg-orange-100 shadow-md  rounded-lg   transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+                        className="p-4 bg-orange-100 shadow-md  rounded-lg border border-white  transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
                     >
+                        <img className="w-full rounded-2xl mb-3 object-contain" src={item.image} alt="" />
                         <h3 className="font-bold text-lg mb-2">
                             Item Lost: {item.item}
                         </h3>
@@ -33,18 +37,9 @@ const RecentlyLostItems = () => {
                             <strong>Category:</strong> {item.category}
                         </p>
                         <div className="mt-4">
-                            <a
-                                href="#"
-                                className="text-blue-400 hover:text-blue-500 underline"
-                            >
-                                View Lost Item
-                            </a>
-                            <a
-                                href="#"
-                                className="ml-4 text-red-400 hover:text-red-500 underline"
-                            >
-                                Alert Owner
-                            </a>
+                            
+                            <Link  className="btn btn-outline" to={'/lostFoundItems'}>View Lost Item</Link>
+                            
                         </div>
                     </div>
                 ))}

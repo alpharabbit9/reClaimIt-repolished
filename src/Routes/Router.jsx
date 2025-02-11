@@ -12,6 +12,7 @@ import AddLostFound from '../Pages/addLostFound';
 import MyItems from '../Pages/Manage My items/MyItems';
 import AllRecoveredItems from '../Pages/AllRecoveredItems';
 import PrivateRoute from './PrivateRoute';
+import About from '../Pages/About';
 
 
 
@@ -41,6 +42,11 @@ const Router = createBrowserRouter([
             {
                 path: 'lostFoundItems',
                 element: <LostFoundItems></LostFoundItems>
+            },
+            {
+                path:'about',
+                element:<About></About>
+
             },
             {
                 path: 'items/:id',

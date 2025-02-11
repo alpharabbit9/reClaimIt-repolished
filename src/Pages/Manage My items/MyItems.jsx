@@ -97,16 +97,16 @@ const MyItems = () => {
     }
 
     return (
-        <div className="bg-black min-h-screen py-32 text-white">
-            <div className="max-w-6xl mx-auto p-6 bg-gray-800 rounded-lg shadow-lg">
+        <div className="bg-orange-50 min-h-screen py-32 text-gray-700">
+            <div className="max-w-6xl mx-auto p-6 bg-orange-100 rounded-lg shadow-lg">
                 <h2 className="text-3xl font-bold mb-6">My Items</h2>
 
                 {items.length === 0 ? (
                     <p className="text-lg text-gray-400">No items added yet.</p>
                 ) : (
-                    <table className="w-full border-collapse bg-gray-900 rounded-lg">
+                    <table className="w-full border-collapse bg-orange-50 rounded-lg">
                         <thead>
-                            <tr className="bg-gray-700">
+                            <tr className="bg-orange-50">
                                 <th className="text-left p-4">Title</th>
                                 <th className="text-left p-4">Post Type</th>
                                 <th className="text-left p-4">Location</th>

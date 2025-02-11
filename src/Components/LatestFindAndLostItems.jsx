@@ -35,12 +35,7 @@ const LatestFindAndLostItems = () => {
                         />
                         <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
                         <p className="text-gray-600 mb-5">{item.description.slice(0, 100)}...</p>
-                        <button
-                            onClick={() => handleViewDetails(item.id)}
-                            className="btn bg-amber-900 hover:bg-amber-700 text-white w-full mt-3"
-                        >
-                            View Details
-                        </button>
+                        <Link to={`/items/${item._id}`} className="btn bg-amber-700 text-white">View Details</Link>
                     </div>
                 ))}
             </div>
